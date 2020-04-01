@@ -11,10 +11,7 @@ const deleteGrid = (e) => {
     color.push(Math.random());
     e.target.style.backgroundColor = `rgba(${color[0]},${color[1]},${color[2]},${color[3]})`;
     setInterval(() => {
-        //e.target.parentNode.removeChild(e.target);
-        e.target.style.backgroundColor = "#234";
-        //e.target.style.border = "none";
-        e.target.style.boxShadow = "0 0 0 #234"
+        e.target.parentNode.removeChild(e.target);
     }, 2000)
 }
 while (height > 19) {
@@ -24,7 +21,7 @@ while (height > 19) {
     row.classList.add('row');
     body.appendChild(container);
     container.appendChild(row);
-    var gridWidth = 20;
+    var gridWidth = 35;
     while (width > 19) {
         var grid = document.createElement('div');
         grid.classList.add('speak');
